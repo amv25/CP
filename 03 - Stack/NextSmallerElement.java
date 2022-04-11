@@ -2,13 +2,13 @@ import java.util.*;
 
 class NextSmallerElement {
     public static void main(String[] args) {
-        long[] que = new long[]{3, 8, 5, 2, 25};
+        int[] que = new int[]{3, 8, 5, 2, 25};
         int n = que.length;
 
         long startTime = System.nanoTime();
         
-        //long[] ans = nextSmallerElementBF(que, n);
-        long[] ans = nextSmallerElement(que, n);
+        //int[] ans = nextSmallerElementBF(que, n);
+        int[] ans = nextSmallerElement(que, n);
 
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
@@ -18,11 +18,11 @@ class NextSmallerElement {
         System.out.println("Runtime: " + (totalTime / 1000000) + "ms");
     }
 
-    static long[] nextSmallerElementBF(long[] nums, int n) {
-        long[] ans = new long[n];
+    static int[] nextSmallerElementBF(int[] nums, int n) {
+        int[] ans = new int[n];
 
         for(int i = 0; i < n; i++) {
-            long temp = -1;
+            int temp = -1;
             for(int j = i + 1; j < n; j++) {
                 if(nums[j] < nums[i]) {
                     temp = nums[j];
@@ -35,9 +35,9 @@ class NextSmallerElement {
         return ans;
     }
 
-    static long[] nextSmallerElement(long[] nums, int n) {
-        long[] result = new long[n];
-        Stack<Long> stack = new Stack<>();
+    static int[] nextSmallerElement(int[] nums, int n) {
+        int[] result = new int[n];
+        Stack<Integer> stack = new Stack<>();
 
         for(int i = n - 1; i >= 0; i--) {
             if(stack.empty()) {
