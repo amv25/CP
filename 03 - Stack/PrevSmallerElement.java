@@ -42,7 +42,6 @@ class PrevSmallerElement {
         for(int i = 0; i < n; i++) {
             if(stack.empty()) {
                 result.add(-1);
-                stack.push(nums[i]);
             }
             else {
                 while(!stack.empty() && nums[i] <= stack.peek()) {
@@ -54,8 +53,8 @@ class PrevSmallerElement {
                 else {
                     result.add(-1);
                 }
-                stack.push(nums[i]);
             }
+            stack.push(nums[i]);
         }
         
         return result;
