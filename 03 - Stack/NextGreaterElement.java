@@ -1,3 +1,6 @@
+//Next Greater Element - GFG
+//Link - https://practice.geeksforgeeks.org/problems/next-larger-element-1587115620/1/
+
 import java.util.*;
 
 class NextGreaterElement {
