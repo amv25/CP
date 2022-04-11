@@ -42,7 +42,6 @@ class NextGreaterElement {
         for(int i = n - 1; i >= 0; i--) {
             if(stack.empty()) {
                 result[i] = -1;
-                stack.push(nums[i]);
             }
             else {
                 while(!stack.empty() && nums[i] >= stack.peek()) {
@@ -54,8 +53,8 @@ class NextGreaterElement {
                 else {
                     result[i] = -1;
                 }
-                stack.push(nums[i]);
             }
+            stack.push(nums[i]);
         }
         
         return result;
