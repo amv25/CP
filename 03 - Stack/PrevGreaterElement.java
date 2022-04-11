@@ -1,3 +1,5 @@
+//Greater number on left - GFG
+
 import java.util.*;
 
 class PrevGreaterElement {
