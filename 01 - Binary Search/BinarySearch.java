@@ -1,7 +1,7 @@
 //704. Binary Search - Leetcode
 //Link - https://leetcode.com/problems/binary-search/
 
-class GuessGame {
+class BinarySearch {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
         
