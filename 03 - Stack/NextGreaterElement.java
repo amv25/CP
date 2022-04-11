@@ -7,7 +7,7 @@ class NextGreaterElement {
 
         long startTime = System.nanoTime();
         
-        //long[] ans = nextGreaterElementGF(que, n);
+        //long[] ans = nextGreaterElementBF(que, n);
         long[] ans = nextGreaterElement(que, n);
 
         long endTime   = System.nanoTime();
