@@ -2,46 +2,46 @@ import java.util.*;
 
 class PrevSmallerElement {
     public static void main(String[] args) {
-        long[] que = new long[]{1, 5, 0, 3, 4, 5};
+        int[] que = new int[]{1, 5, 0, 3, 4, 5};
         int n = que.length;
 
         long startTime = System.nanoTime();
         
-        //long[] ans = prevSmallerElementBF(que, n);
-        long[] ans = prevSmallerElement(que, n);
+        //ArrayList<Integer> ans = prevSmallerElementBF(que, n);
+        ArrayList<Integer> ans = prevSmallerElement(que, n);
 
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
 
-        System.out.println(Arrays.toString(ans));
+        System.out.println(ans);
 
         System.out.println("Runtime: " + (totalTime / 1000000) + "ms");
     }
 
-    static long[] prevSmallerElementBF(long[] nums, int n) {
-        long[] ans = new long[n];
+    static ArrayList<Integer> prevSmallerElementBF(int[] nums, int n) {
+        ArrayList<Integer> result = new ArrayList<>();
 
         for(int i = 0; i < n; i++) {
-            long temp = -1;
+            int temp = -1;
             for(int j = 0; j < i; j++) {
                 if(nums[j] < nums[i]) {
                     temp = nums[j];
                     break;
                 }
             }
-            ans[i] = temp;
+            result.add(temp);
         }
 
-        return ans;
+        return result;
     }
 
-    static long[] prevSmallerElement(long[] nums, int n) {
-        long[] result = new long[n];
-        Stack<Long> stack = new Stack<>();
+    static ArrayList<Integer> prevSmallerElement(int[] nums, int n) {
+        ArrayList<Integer> result = new ArrayList<>();
+        Stack<Integer> stack = new Stack<>();
 
         for(int i = 0; i < n; i++) {
             if(stack.empty()) {
-                result[i] = -1;
+                result.add(-1);
                 stack.push(nums[i]);
             }
             else {
@@ -49,10 +49,10 @@ class PrevSmallerElement {
                     stack.pop();
                 }
                 if(!stack.empty()) {
-                    result[i] = stack.peek();
+                    result.add(stack.peek());
                 }
                 else {
-                    result[i] = -1;
+                    result.add(-1);
                 }
                 stack.push(nums[i]);
             }
