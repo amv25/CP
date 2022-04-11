@@ -1,4 +1,4 @@
-//69 - Sqrt(x) - Leetcode
+//69. Sqrt(x) - Leetcode
 //https://leetcode.com/problems/sqrtx/
 
 class SquareRoot {
