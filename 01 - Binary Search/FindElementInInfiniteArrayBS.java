@@ -1,4 +1,7 @@
-public class FindElementInInfiniteArrayBS {
+//Find Element in Infinite Sorted Array - GFG
+//Link - https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
+
+public class FindElementInInfiniteArray {
     public static void main(String[] args) {
         int[] arr = new int[100];
         for(int i = 0; i < 100; i++) {
