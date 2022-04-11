@@ -7,8 +7,8 @@ class PrevSmallerElement {
 
         long startTime = System.nanoTime();
         
-        ArrayList<Integer> ans = prevSmallerElementBF(que, n);
-        //ArrayList<Integer> ans = prevSmallerElement(que, n);
+        //ArrayList<Integer> ans = prevSmallerElementBF(que, n);
+        ArrayList<Integer> ans = prevSmallerElement(que, n);
 
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
