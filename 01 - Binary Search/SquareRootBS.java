@@ -1,4 +1,7 @@
-class SquareRootBS {
+//69 - Sqrt(x) - Leetcode
+//https://leetcode.com/problems/sqrtx/
+
+class SquareRoot {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
         
