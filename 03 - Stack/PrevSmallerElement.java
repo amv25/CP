@@ -1,3 +1,6 @@
+//Smallest number on left - GFG
+//Link - https://practice.geeksforgeeks.org/problems/smallest-number-on-left3403/1/
+
 import java.util.*;
 
 class PrevSmallerElement {
