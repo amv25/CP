@@ -1,33 +1,41 @@
-package com.maha;
-
 public class FindElementInInfiniteArrayBS {
-
     public static void main(String[] args) {
-	// write your code here
-        int arr[100] = new int[];
-        for(int i = 0;i < 100; i++)
-        {
+        int[] arr = new int[100];
+        for(int i = 0; i < 100; i++) {
             arr[i] = i + 1;
         }
-        int ele = 7;
+        int target = 7;
         int start = 0;
         int end = 1;
-        while(arr[end] < ele)
-        {
+
+        long startTime = System.nanoTime();
+        
+        while(arr[end] < target) {
             start = end;
             end = end * 2;
         }
-        System.out.println(binarySearch(arr, ele, start, end));
+        int ans = binarySearch(arr, target, start, end);
+
+        long endTime   = System.nanoTime();
+        long totalTime = endTime - startTime;
+
+        System.out.println(ans);
+
+        System.out.println("Runtime: " + (totalTime / 1000000) + "ms");
     }
-    static int binarySearch(int[] arr, int ele, int start, int end){
+
+    static int binarySearch(int[] arr, int target, int start, int end){
         while(start <= end) {
-            int mid = start + (end - start)/2;
-            if(ele == arr[mid])
+            int mid = start + (end - start) / 2;
+            if(target == arr[mid]) {
                 return mid;
-            else if(ele < arr[mid])
+            }
+            else if(target > arr[mid]) {
                 start = mid + 1;
-            else
+            }
+            else {
                 end = mid - 1;
+            }
         }
         return -1;
     }
