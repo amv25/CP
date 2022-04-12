@@ -43,19 +43,14 @@ class NextGreaterElement {
         Stack<Long> stack = new Stack<>();
 
         for(int i = n - 1; i >= 0; i--) {
-            if(stack.empty()) {
-                result[i] = -1;
+            while(!stack.empty() && nums[i] >= stack.peek()) {
+                stack.pop();
+            }
+            if(!stack.empty()) {
+                result[i] = stack.peek();
             }
             else {
-                while(!stack.empty() && nums[i] >= stack.peek()) {
-                    stack.pop();
-                }
-                if(!stack.empty()) {
-                    result[i] = stack.peek();
-                }
-                else {
-                    result[i] = -1;
-                }
+                result[i] = -1;
             }
             stack.push(nums[i]);
         }
