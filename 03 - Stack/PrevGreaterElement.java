@@ -42,19 +42,14 @@ class PrevGreaterElement {
         Stack<Integer> stack = new Stack<>();
 
         for(int i = 0; i < n; i++) {
-            if(stack.empty()) {
-                result.add(-1);
+            while(!stack.empty() && nums[i] >= stack.peek()) {
+                stack.pop();
+            }
+            if(!stack.empty()) {
+                result.add(stack.peek());
             }
             else {
-                while(!stack.empty() && nums[i] >= stack.peek()) {
-                    stack.pop();
-                }
-                if(!stack.empty()) {
-                    result.add(stack.peek());
-                }
-                else {
-                    result.add(-1);
-                }
+                result.add(-1);
             }
             stack.push(nums[i]);
         }
