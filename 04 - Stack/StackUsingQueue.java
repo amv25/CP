@@ -34,14 +34,14 @@ class CustomStack {
     }
 
     int pop() {
-        if(queue.isEmpty()) {
+        if(isEmpty()) {
             return -1;
         }
         return queue.remove();
     }
 
     int peek() {
-        if(queue.isEmpty()) {
+        if(isEmpty()) {
             return -1;
         }
         return queue.peek();
