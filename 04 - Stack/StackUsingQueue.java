@@ -7,6 +7,7 @@ class StackUsingQueue {
     public static void main(String[] args) {
         CustomStack stack = new CustomStack();
         
+        System.out.println("Pop: " + stack.pop());
         System.out.println("Empty: " + stack.isEmpty());
         System.out.println("Push: 1");
         stack.push(1);
