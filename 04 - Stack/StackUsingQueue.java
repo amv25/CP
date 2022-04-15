@@ -7,18 +7,18 @@ class StackUsingQueue {
     public static void main(String[] args) {
         CustomStack stack = new CustomStack();
         
-        System.out.println("Pop: " + stack.pop());
-        System.out.println("Empty: " + stack.isEmpty());
-        System.out.println("Push: 1");
+        System.out.println("Pop   : " + stack.pop());
+        System.out.println("Empty : " + stack.isEmpty());
+        System.out.println("Push  : 1");
         stack.push(1);
-        System.out.println("Peek: " + stack.peek());
-        System.out.println("Push: 2");
+        System.out.println("Peek  : " + stack.peek());
+        System.out.println("Push  : 2");
         stack.push(2);
-        System.out.println("Peek: " + stack.peek());
-        System.out.println("Empty: " + stack.isEmpty());
-        System.out.println("Pop: " + stack.pop());
-        System.out.println("Pop: " + stack.pop());
-        System.out.println("Empty: " + stack.isEmpty());
+        System.out.println("Peek  : " + stack.peek());
+        System.out.println("Empty : " + stack.isEmpty());
+        System.out.println("Pop   : " + stack.pop());
+        System.out.println("Pop   : " + stack.pop());
+        System.out.println("Empty : " + stack.isEmpty());
     }    
 }
 
