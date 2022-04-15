@@ -1,4 +1,5 @@
 //Greater number on left - GFG
+//Link - https://www.geeksforgeeks.org/count-greater-elements-on-the-left-side-of-every-array-element/
 
 import java.util.*;
 
