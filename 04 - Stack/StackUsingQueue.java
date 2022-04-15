@@ -1,4 +1,4 @@
-//Stack implementation using a queue
+//Stack implementation using a queue - GFG
 //Link - https://www.geeksforgeeks.org/implement-a-stack-using-single-queue/
 
 import java.util.*;
