@@ -8,20 +8,26 @@ class MinimumOfStackExtraSpace {
         CustomStack stack = new CustomStack();
         
         System.out.println("Empty: " + stack.isEmpty());
+
         System.out.println("Pop: " + stack.pop());
         System.out.println("Peek: " + stack.peek());
         System.out.println("Min: " + stack.getMin());
+
         System.out.println("Push: 5");
         stack.push(5);
         System.out.println("Min: " + stack.getMin());
+
         System.out.println("Push: 3");
         stack.push(3);
         System.out.println("Min: " + stack.getMin());
+
         System.out.println("Push: 1");
         stack.push(1);
         System.out.println("Min: " + stack.getMin());
+
         System.out.println("Pop: " + stack.pop());
         System.out.println("Min: " + stack.getMin());
+        
         System.out.println("Empty: " + stack.isEmpty());
     }   
 }
